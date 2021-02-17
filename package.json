@@ -1,0 +1,25 @@
+{
+  "name": "testimonials-slider",
+  "version": "1.0.0",
+  "description": "![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "scss": "node-sass --watch ./public/index.scss -o ./public/css", // watching scss to detect changes, recompiles css output
+    "start": "nodemon index.js -e scss" // using nodemon extension to watch scss file for changes and resstart server when update is detected
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melodymastache/testimonials-page.git"
+  },
+  "author": "Melody Mastache",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melodymastache/testimonials-page/issues"
+  },
+  "homepage": "https://github.com/melodymastache/testimonials-page#readme"
+}
