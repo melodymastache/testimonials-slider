@@ -9,8 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "scss": "node-sass --watch ./public/index.scss -o ./public/css", // watching scss to detect changes, recompiles css output
-    "start": "nodemon index.js -e scss" // using nodemon extension to watch scss file for changes and resstart server when update is detected
+    "scss": "node-sass --watch ./public/index.scss -o ./public/css",
+    "start": "nodemon index.js -e scss" 
   },
   "repository": {
     "type": "git",
