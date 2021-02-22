@@ -3,12 +3,14 @@ body {
   font-size: 32px;
   font-family: Inter;
   text-align: center;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: auto 0; }
 
 @media screen and (max-width: 375px) {
+  #inactive {
+    display: none; }
   .parent-container {
-    display: grid;
-    margin: auto 0; }
+    display: grid; }
   .bg {
     width: 100%;
     z-index: -1; }
@@ -49,5 +51,4 @@ body {
     color: #babacf;
     margin-top: 0px; }
   .curve {
-    width: 100%;
-    margin-bottom: -1em; } }
+    width: 100%; } }

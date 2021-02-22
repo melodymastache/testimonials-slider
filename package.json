@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "scss": "node-sass --watch ./public/index.scss -o ./public/css",
-    "start": "nodemon index.js -e scss" 
+    "start": "nodemon server.js -e scss" 
   },
   "repository": {
     "type": "git",
