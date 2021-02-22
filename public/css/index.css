@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   margin: auto 0; }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
   #inactive {
     display: none; }
   .parent-container {
