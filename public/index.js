@@ -1,13 +1,23 @@
-$('.next').click((el) => {
-  console.log("Next Clicked!");
-  console.log(el); // IMG OBJ
-});
+var slides = document.getElementsByClassName('slide');
 
 $('.prev').click(() => {
-  console.log('Previous clicked!');
-  // if (document.) {
+  for (var i in slides) {
+    if (slides[i].id == 'active') {
+      slides[i].id = 'inactive';
+    }
+    else {
+      slides[i].id = 'active';
+    }
+  }
+});
 
-  // }
-    var target = document.getElementById('inactive');
-  target.id = 'active';
+$('.next').click(() => {
+  for (var i in slides) {
+    if (slides[i].id == 'active') {
+      slides[i].id = 'inactive';
+    }
+    else {
+      slides[i].id = 'active';
+    }
+  }
 });

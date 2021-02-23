@@ -4,18 +4,50 @@
 $Dark-Blue: hsl(240, 38%, 20%);
 $Grayish-Blue: hsl(240, 18%, 77%);
 
+//////////////////// GLOBAL STYLES //////////////////
 body {
     font-size: 32px;
     font-family: Inter;
-    text-align: center; //mobile?
     box-sizing: border-box;
     margin: auto 0;
 }
 
+#inactive {
+    display: none;
+}
+
+.testimonial {
+    color: $Dark-Blue;
+}
+
+.position {
+    color: $Grayish-Blue;
+}
+
+.arrow {
+    padding: 15px;
+
+    & svg path {
+        stroke-width: 6px;
+    }
+}
+
+.arrows-parents {
+    background-color: white;
+    margin-top: -1.7em;
+    margin-left: 40%;
+    z-index: 1;
+    width: 3em;
+    height: 1.5em;
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
 //////////////////// MOBILE VIEW ////////////////////
-@media screen and (min-width: 375px) {
-    #inactive {
-        display: none;
+@media screen and (min-width: 375px) and (max-width: 1439px) {
+    .body {
+        text-align: center;
     }
 
     .parent-container {
@@ -37,31 +69,15 @@ body {
         box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
     }
 
-    .arrows-parents {
-        background-color: white;
-        margin-top: -1.7em;
-        margin-left: 40%;
-        z-index: 1;
-        width: 3em;
-        height: 1.5em;
-        border-radius: 35px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .arrow {
-        padding: 15px;
-
-        & svg path {
-            stroke-width: 6px;
-        }
-    }
-
     .text {
         margin-top: 1.6em;
         display: grid;
         width: 85%;
         margin-left: 9%;
+    }
+
+    .position {
+        margin-top: 0px;
     }
 
     .quote-img {
@@ -70,16 +86,13 @@ body {
         height: 2.3em;
     }
 
-    .testimonial {
-        color: $Dark-Blue;
-    }
-
-    .position {
-        color: $Grayish-Blue;
-        margin-top: 0px;
-    }
-
     .curve {
         width: 100%;
+        margin-bottom: -1em; // weird gap at the bottom fixed
     }
+}
+
+//////////////////// DESKTOP VIEW ///////////////////
+@media screen and (min-width: 1440px) {
+    
 }
