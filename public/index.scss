@@ -10,6 +10,7 @@ body {
     font-family: Inter;
     box-sizing: border-box;
     margin: auto 0;
+    background-color: orange; // test code
 }
 
 #inactive {
@@ -34,14 +35,17 @@ body {
 
 .arrows-parents {
     background-color: white;
-    margin-top: -1.7em;
-    margin-left: 40%;
     z-index: 1;
     width: 3em;
     height: 1.5em;
     border-radius: 35px;
     display: flex;
     justify-content: space-between;
+}
+
+.curve {
+    width: 50%;
+    margin-bottom: -1em; // weird gap at the bottom fixed
 }
 
 //////////////////// MOBILE VIEW ////////////////////
@@ -69,6 +73,11 @@ body {
         box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
     }
 
+    .arrows-parents {
+        margin-top: -1.7em;
+        margin-left: 40%;
+    }
+
     .text {
         margin-top: 1.6em;
         display: grid;
@@ -76,23 +85,45 @@ body {
         margin-left: 9%;
     }
 
-    .position {
-        margin-top: 0px;
-    }
-
     .quote-img {
         margin-left: 37%;
         margin-bottom: -2.5em;
         height: 2.3em;
     }
+    
+    .position {
+        margin-top: 0px;
+    }
 
     .curve {
         width: 100%;
-        margin-bottom: -1em; // weird gap at the bottom fixed
     }
 }
 
 //////////////////// DESKTOP VIEW ///////////////////
 @media screen and (min-width: 1440px) {
-    
+    .bg {
+        padding-left: 20em;
+    }
+
+    .avatar {
+        margin-top: -28em;
+        margin-left: 22em;
+        margin-bottom: 2.7em;
+    }
+
+    .arrows-parents {
+        background-color: red;
+        margin-bottom: 5em;
+        margin-left: 20em;
+    }
+
+    .text {
+        width: 50%;
+        margin: -30em 2em 0em;
+    }
+
+    .parent-container {
+        margin: 1em;
+    }
 }
