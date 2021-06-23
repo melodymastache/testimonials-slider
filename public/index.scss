@@ -6,13 +6,15 @@ $Grayish-Blue: hsl(240, 18%, 77%);
 
 //////////////////// GLOBAL STYLES //////////////////
 body {
-    font-size: 32px;
-    font-family: Inter;
+    font: {
+        size: 32px;
+        family: Inter;
+    }
     box-sizing: border-box;
     margin: auto 0;
-    background-color: orange; // test code
 }
 
+// show one card at a time //
 #inactive {
     display: none;
 }
@@ -29,8 +31,18 @@ body {
     padding: 15px;
 
     & svg path {
-        stroke-width: 6px;
+        stroke-width: 3px;
     }
+}
+
+.text {
+    font-weight: 300;
+}
+
+.avatar {
+    -webkit-box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
+    box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
 }
 
 .arrows-parents {
@@ -48,6 +60,61 @@ body {
     margin-bottom: -1em; // weird gap at the bottom fixed
 }
 
+//////////////////// DESKTOP VIEW ///////////////////
+@media screen and (min-width: 1440px) {
+    .bg {
+        padding-left: 20em;
+    }
+
+    .avatar {
+        margin: {
+            top: -25em;
+            left: 22em;
+            bottom: 2.7em;
+        }
+    }
+
+    .arrows-parents {
+        margin: {
+            left: 24.3em;
+            top: -3.7em;
+        }
+        position: absolute; // overlays element on top of avatar
+    }
+
+    .quote-img {
+        padding-left: 3em;
+        margin: {
+            bottom: -2.3em;
+            top: 2em;
+        }
+    }
+
+    .text {
+        width: 45%;
+        margin-top: -20em;
+        padding-left: 5em;
+    }
+
+    .author-container {
+        display: flex;
+        font: {
+            size: 20px;
+            weight: 500;
+        }
+        margin-bottom: 4em;
+    }
+
+    .position {
+        margin-top: 0em;
+        padding-left: 0.5em;
+    }
+
+    .parent-container {
+        margin: 1em;
+    }
+}
+
 //////////////////// MOBILE VIEW ////////////////////
 @media screen and (min-width: 375px) and (max-width: 1439px) {
     .body {
@@ -55,7 +122,7 @@ body {
     }
 
     .parent-container {
-        display: grid; //allows for overlapping images
+        display: grid; // allows for overlapping images
     }
 
     .bg {
@@ -65,65 +132,40 @@ body {
 
     .avatar {
         width: 78%;
-        margin-top: -9.6em;
-        margin-left: 1em;
+        margin: {
+            top: -10em;
+            left: 1em;
+        }
         object-position: center; //keeps avatar from overflowing from viewport
-        -webkit-box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
-        -moz-box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
-        box-shadow: 0px 31px 54px -25px rgba(0, 0, 0, 0.51);
     }
 
     .arrows-parents {
-        margin-top: -1.7em;
-        margin-left: 40%;
+        margin-top: -1.6em;
+        justify-self: center;
     }
 
     .text {
-        margin-top: 1.6em;
+        margin: {
+            top: 1.6em;
+            left: 9%;
+        }
         display: grid;
         width: 85%;
-        margin-left: 9%;
+        text-align: center;
+        font-size: 18px;
     }
 
     .quote-img {
-        margin-left: 37%;
-        margin-bottom: -2.5em;
+        justify-self: center;
+        margin-bottom: -2.3em;
         height: 2.3em;
     }
-    
+
     .position {
         margin-top: 0px;
     }
 
     .curve {
         width: 100%;
-    }
-}
-
-//////////////////// DESKTOP VIEW ///////////////////
-@media screen and (min-width: 1440px) {
-    .bg {
-        padding-left: 20em;
-    }
-
-    .avatar {
-        margin-top: -28em;
-        margin-left: 22em;
-        margin-bottom: 2.7em;
-    }
-
-    .arrows-parents {
-        background-color: red;
-        margin-bottom: 5em;
-        margin-left: 20em;
-    }
-
-    .text {
-        width: 50%;
-        margin: -30em 2em 0em;
-    }
-
-    .parent-container {
-        margin: 1em;
     }
 }
